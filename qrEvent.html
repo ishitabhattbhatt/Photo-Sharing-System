@@ -1,0 +1,25 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Events</title>
+</head>
+<body>
+    <h1>Event Details</h1>
+    <div>
+        <p><strong>Event Name:</strong> {{ events.event_name }}</p>
+        <p><strong>End Date:</strong> {{ events.end_date }}</p>
+        <p><strong>Photos per Person:</strong> {{ events.photos_per_person }}</p>
+        <strong>Start clicling photos:</strong><a href='/click'>camera</a><br><br>
+    </div>
+</body>
+<footer>
+    <div class="foot">
+        <p><a href="/eventgen">Create</a></p>
+        <p><a href="/profile">Profile</a></p>
+        <p><a href="/allEvents">Camera</a></p>
+        <p>Settings</p>
+    </div>
+</footer>
+</html>

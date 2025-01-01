@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Events</title>
+</head>
+<body>
+    <h1>Events</h1>
+    <ul>
+        {% for event in events %}
+        <li>
+            <strong>Event Name:</strong> {{ event.event_name }} <br>
+            <strong>End Date:</strong> {{ event.end_date }} <br>
+            <strong>Photos per Person:</strong> {{ event.photos_per_person }} <br>
+            <strong>Start clicling photos:</strong><a href='/click/{{event.event_id}}'>Camera</a><br>
+            <strong>Share the QR to invite others: </strong><a href='/camera/{{event.event_id}}'>QR CODE</a><br>
+            <strong>View Gallery: </strong><a href='/gallary/{{event.event_id}}'>Gallery</a><br><br>
+            
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+<footer>
+    <div class="foot">
+        <p><a href="/eventgen">Create</a></p>
+        <p><a href="/profile">Profile</a></p>
+        <p><a href="/allEvents">Camera</a></p>
+        <div class="logout">
+            <a href="/logout" class="btn btn dark">logout</a>
+        </div>
+        <p>Settings</p>
+    </div>
+</footer>
+
+</html>

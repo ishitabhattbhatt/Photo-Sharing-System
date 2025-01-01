@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first page POV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="img">
+        <img src='static\party.jpg' >
+    </div>
+    <div class="POV">
+        <i class="fa-solid fa-camera-retro"></i>
+        <p id="pov">
+            POV
+        </p>
+    </div>
+
+    <div class="event">
+      
+        <form action="{{url_for('eventgen')}}" method="post">
+        <label for="data_from_form">What's the occassion?</label>
+        <input  type="text"  name="data_from_form" required class="occ" >
+        <br>
+        <button type="submit" class="button">Generate event</button>
+
+        </form>
+    </div>
+    
+    
+</body>
+<footer>
+    <div class="foot">
+        <p><a class="btn btn-primary" href="/eventgen">Create</a></p>
+        <p><a class="btn btn-primary" href="/profile">Profile</a></p>
+        <p><a class="btn btn-primary" href="/allEvents">Camera</a></p>
+        <p><a class="btn btn-primary" href="/logout" role="button">Logout</a></p>
+    </div>
+</footer>
+</html> 
+
